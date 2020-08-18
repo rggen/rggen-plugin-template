@@ -1,11 +1,11 @@
-register_blocks:
+- register_block:
   - name:       block_0
     byte_size:  256
-    registers:
 
 ########################################################################
-      - name:           register_0
-        offset_address: 0x00
-        size:           [2, 2]
-        bit_fields:
-          - { name: bit_field_0, bit_assignment: { lsb: 0, width: 4}, type: foo }
+  - register:
+    - name:           register_0
+      offset_address: 0x00
+      size:           [2, 2]
+      bit_fields:
+        - { name: bit_field_0, bit_assignment: { lsb: 0, width: 4}, type: foo }

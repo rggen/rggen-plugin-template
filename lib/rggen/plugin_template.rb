@@ -4,6 +4,8 @@ require_relative 'plugin_template/version'
 
 module RgGen
   module PluginTemplate
+    PLUGIN_NAME = :'rggen-plugin-template'
+
     PLUGIN_FILES = [
       'plugin_template/bit_field/type/foo'
     ].freeze
