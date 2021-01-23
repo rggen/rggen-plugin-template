@@ -4,14 +4,12 @@ require_relative 'plugin_template/version'
 
 module RgGen
   module PluginTemplate
-    PLUGIN_NAME = :'rggen-plugin-template'
+    extend Core::Plugin
 
-    PLUGIN_FILES = [
-      'plugin_template/bit_field/type/foo'
-    ].freeze
-
-    def self.default_setup(_builder)
-      PLUGIN_FILES.each { |file| require_relative file }
+    setup_plugin :'rggen-plugin-template' do |plugin|
+      plugin.files [
+        'plugin_template/bit_field/type/foo'
+      ]
     end
   end
 end

@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-root_path = File.expand_path('../..', __dir__)
-require File.join(root_path, 'rggen', 'plugin_template')
+require File.expand_path('../plugin_template', __dir__)
 
-RgGen.setup RgGen::PluginTemplate do |builder|
+RgGen.register_plugin RgGen::PluginTemplate do |builder|
   builder.enable :bit_field, :type, [:foo]
 end
